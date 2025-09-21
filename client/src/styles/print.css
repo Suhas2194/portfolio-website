@@ -1,0 +1,103 @@
+/* Print-friendly stylesheet */
+@media print {
+  /* Hide non-essential elements */
+  .enhanced-button,
+  button,
+  .scroll-progress,
+  #video-upload,
+  .theme-toggle,
+  nav,
+  .navigation,
+  .contact-form,
+  .float-animation,
+  .glow-icon,
+  .enhanced-icon {
+    display: none !important;
+  }
+
+  /* Reset colors and backgrounds for print */
+  * {
+    color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Page setup */
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Typography for print */
+  h1 { font-size: 18pt; margin-bottom: 12pt; }
+  h2 { font-size: 16pt; margin-bottom: 10pt; }
+  h3 { font-size: 14pt; margin-bottom: 8pt; }
+  h4, h5, h6 { font-size: 12pt; margin-bottom: 6pt; }
+
+  /* Remove gradients and fancy effects */
+  .gradient-text {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+    color: #000 !important;
+  }
+
+  /* Ensure contact information is visible */
+  .contact-info, 
+  .contact-details {
+    display: block !important;
+  }
+
+  /* Page breaks */
+  .page-break {
+    page-break-before: always;
+  }
+
+  /* Ensure links show URLs */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #666;
+  }
+
+  /* Hide decorative images but keep profile photo */
+  img:not([alt*="profile"]):not([alt*="Suhas"]) {
+    display: none !important;
+  }
+
+  /* Keep essential spacing */
+  section {
+    margin-bottom: 20pt;
+    page-break-inside: avoid;
+  }
+
+  /* Optimize cards for print */
+  .card, .enhanced-card {
+    border: 1pt solid #ccc !important;
+    padding: 8pt !important;
+    margin-bottom: 8pt;
+    background: white !important;
+  }
+
+  /* Timeline adjustments */
+  .timeline {
+    display: none;
+  }
+
+  /* Skills layout for print */
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4pt;
+  }
+
+  .skill-item {
+    border: 1pt solid #ccc;
+    padding: 2pt 4pt;
+    margin: 2pt;
+    display: inline-block;
+  }
+}
