@@ -1,0 +1,121 @@
+/* Mobile optimization styles */
+@media (max-width: 768px) {
+  /* Improve touch targets */
+  button, .button, a {
+    min-height: 44px;
+    padding: 12px 16px;
+  }
+
+  /* Better spacing on mobile */
+  .container, .max-w-6xl, .max-w-4xl {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Stack navigation items */
+  .nav-items {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Optimize hero section */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Improve form usability */
+  input, textarea, select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  /* Better card layouts */
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Timeline mobile view */
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-left: 24px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  /* Skills mobile layout */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  /* Hide complex animations on mobile for performance */
+  @media (prefers-reduced-motion: reduce) {
+    .enhanced-icon,
+    .float-animation,
+    .glow-icon {
+      animation: none !important;
+      transform: none !important;
+    }
+  }
+
+  /* Optimize images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Better contact form layout */
+  .contact-form .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Improve readability */
+  .text-enhanced {
+    text-shadow: none;
+  }
+
+  /* Optimize scroll behavior */
+  html {
+    scroll-padding-top: 80px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-badges {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-logo {
+    font-size: 0.9rem;
+  }
+}
